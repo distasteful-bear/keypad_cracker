@@ -1,11 +1,9 @@
 import "./App.css";
 import JamesKeyPad from "./JamesKeyPad";
 import JadenKeyPad from "./JadenKeyPad";
-import { useState } from "react";
 
-function App() {
-  const [submitted, setSubmitted] = useState(false);
-  // need to add Jaden's keypad and also setup the submit / show all options stuff.
+export default function App() {
+
   return (
     <div>
       <div>
@@ -15,19 +13,13 @@ function App() {
           simple react concepts.
         </p>
       </div>
-      {!submitted ? (
-        <div>
-          <p>James' KeyPad</p>
-          <JamesKeyPad />
+      <div>
+        <p>James' KeyPad</p>
+        <JamesKeyPad />
 
-          <p>Jaden's KeyPad</p>
-          <JadenKeyPad />
-        </div>
-      ) : (
-        <div></div>
-      )}
+        <p>Jaden's KeyPad</p>
+        <JadenKeyPad />
+      </div>
     </div>
   );
 }
-
-export default App;
